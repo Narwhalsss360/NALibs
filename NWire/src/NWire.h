@@ -15,6 +15,7 @@
 #define INVALID_NWD(nwd) (nwd.address == 0 && nwd.data == 0) ? true : false
 #define SEARCH_SEND 0x01
 #define SEARCH_RECEIVED 0x02
+#define DEFAULT_NWD_LENGTH 32
 
 enum NWireErrors
 {
@@ -40,15 +41,16 @@ private:
     uint8_t receivedDataIndex;
     uint8_t sendDataIndex;
     uint8_t txAddress;
+    uint8_t lastError;
     void clearMainBuffer();
     uint32_t bytesToU32() const;
-    uint8_t search(uint8_t, uint8_t);
+    uint8_t search(uint8_t, uint8_t) const;
 public:
     NWireSlave();
     NWireSlave(uint8_t);
     NWD onReceive();
     void onRequest();
-    bool getData();
+    bool getData(pNWD);
     void add(pNWD);
     uint8_t getLastError();
 };
