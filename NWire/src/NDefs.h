@@ -7,6 +7,8 @@
 	#include "WProgram.h"
 #endif
 
+#define NDEFS_VERSION "1.0.0"
+
 #define ZERO 0
 #define NEWLINE '\n'
 #define CARRIAGERETURN '\r'
