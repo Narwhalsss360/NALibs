@@ -33,7 +33,7 @@ typedef NWD* pNWD;
 class NWireSlave
 {
 private:
-    mainBuffer[MAIN_BUFFER_SIZE];
+    uint8_t mainBuffer[MAIN_BUFFER_SIZE];
     pNWD receivedData;
     pNWD sendData;
     uint8_t length;
