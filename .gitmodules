@@ -19,3 +19,6 @@
 [submodule "tools/Nlibrary-registry"]
 	path = tools/Nlibrary-registry
 	url = git@github.com:Narwhalsss360/Nlibrary-registry.git
+[submodule "NSerialCom"]
+	path = NSerialCom
+	url = git@github.com:Narwhalsss360/NSerialCom.git
