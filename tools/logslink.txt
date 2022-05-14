@@ -1,0 +1,5 @@
+http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NFuncs/
+http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NRotary/
+http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NPush/
+http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NColor/
+http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NDefs/
