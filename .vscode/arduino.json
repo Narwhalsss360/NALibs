@@ -2,5 +2,5 @@
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
     "programmer": "arduino:arduinoisp",
-    "sketch": "NRotary\\examples\\Push\\Push.ino"
+    "sketch": "NDefs\\examples\\isBetween\\isBetween.ino"
 }
