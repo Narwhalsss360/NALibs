@@ -22,3 +22,6 @@
 [submodule "NSerialCom"]
 	path = NSerialCom
 	url = git@github.com:Narwhalsss360/NSerialCom.git
+[submodule "NTimer"]
+	path = NTimer
+	url = git@github.com:Narwhalsss360/NTimer.git
