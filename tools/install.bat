@@ -46,6 +46,20 @@ if exist "%ArduinoLibDir%\NWire" (
 	echo No NWire to delete.
 )
 
+if exist "%ArduinoLibDir%\NTimer" (
+	powershell -Command "& {rd -r '%ArduinoLibDir%\NTimer'}"
+	echo Deleted libraries\NTimer Directory.
+) else (
+	echo No NTimer to delete.
+)
+
+if exist "%ArduinoLibDir%\NSerialCom" (
+	powershell -Command "& {rd -r '%ArduinoLibDir%\NSerialCom'}"
+	echo Deleted libraries\NSerialCom Directory.
+) else (
+	echo No NSerialCom to delete.
+)
+
 @echo on
 
 echo d | xcopy /d /y /s "%RepoRoot%\NColor" "%ArduinoLibDir%\NColor"
@@ -54,3 +68,5 @@ echo d | xcopy /d /y /s "%RepoRoot%\NPush" "%ArduinoLibDir%\NPush"
 echo d | xcopy /d /y /s "%RepoRoot%\NRotary" "%ArduinoLibDir%\NRotary"
 echo d | xcopy /d /y /s "%RepoRoot%\NWire" "%ArduinoLibDir%\NWire"
 echo d | xcopy /d /y /s "%RepoRoot%\NDefs" "%ArduinoLibDir%\NDefs"
+echo d | xcopy /d /y /s "%RepoRoot%\NTimer" "%ArduinoLibDir%\NTimer"
+echo d | xcopy /d /y /s "%RepoRoot%\NSerialCom" "%ArduinoLibDir%\NSerialCom"
