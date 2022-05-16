@@ -1,6 +1,6 @@
 # NALibs - Working repository for all NALibs
 # To-Do
-## 2) Continue implementation of NWire for Host
+## 2) Test NWireHost & NWireClient
 ## 3) Test NSerialCom
 # Logs
   [NColor](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NColor/)
