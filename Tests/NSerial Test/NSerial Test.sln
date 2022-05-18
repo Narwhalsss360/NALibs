@@ -5,16 +5,36 @@ VisualStudioVersion = 17.2.32422.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSerial Test", "NSerial Test.csproj", "{FBC74E9F-D067-422D-80ED-C55ED22FEC96}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NSerial Test (LCD I2C)", "..\NSerial Test (LCD I2C)\NSerial Test (LCD I2C).vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LiquidCrystal_I2C-1.1.2", "E:\Users\sandr\Documents\Arduino\libraries\LiquidCrystal_I2C\LiquidCrystal_I2C-1.1.2.vcxitems", "{776A8B83-8421-4B9E-8550-ADF7FAC95749}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NSerialCom-1.0.0", "E:\Users\sandr\Documents\Arduino\libraries\NSerialCom\NSerialCom-1.0.0.vcxitems", "{5BE3E499-F2A7-4777-8EC6-7916A36628E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FBC74E9F-D067-422D-80ED-C55ED22FEC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FBC74E9F-D067-422D-80ED-C55ED22FEC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC74E9F-D067-422D-80ED-C55ED22FEC96}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FBC74E9F-D067-422D-80ED-C55ED22FEC96}.Debug|x86.Build.0 = Debug|Any CPU
 		{FBC74E9F-D067-422D-80ED-C55ED22FEC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBC74E9F-D067-422D-80ED-C55ED22FEC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC74E9F-D067-422D-80ED-C55ED22FEC96}.Release|x86.ActiveCfg = Release|Any CPU
+		{FBC74E9F-D067-422D-80ED-C55ED22FEC96}.Release|x86.Build.0 = Release|Any CPU
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|Any CPU.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|Any CPU.Build.0 = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
