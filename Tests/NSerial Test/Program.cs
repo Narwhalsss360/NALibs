@@ -17,30 +17,60 @@ namespace NSerial_Test
 
             Console.Write("Data:");
             string dataInput = Console.ReadLine();
-
-            byte[] bytes = new byte[dataInput.Length + MIN_MSG_SIZE - 1];
-            bytes[0] = SOH;
-            bytes[1] = (byte)dataInput.Length;
-
-            byte[] addressBytes = BitConverter.GetBytes(address);
-            bytes[2] = addressBytes[1]; //LSB-First
-            bytes[3] = addressBytes[0]; //LSB-First
-
-            byte[] dataBytes = Encoding.UTF8.GetBytes(dataInput);
-            for (int i = 0; i < dataBytes.Length; i++)
+            
+            int stringInt;
+            if (int.TryParse(dataInput, out stringInt))
             {
-                bytes[i + 4] = dataBytes[i];
+                byte[] bytes = new byte[8];
+                bytes[0] = SOH;
+                bytes[1] = 4;
+
+                byte[] addressBytes = BitConverter.GetBytes(address);
+                bytes[2] = addressBytes[1]; //LSB-First
+                bytes[3] = addressBytes[0]; //LSB-First
+
+                byte[] dataBytes = new byte[4];
+                dataBytes = BitConverter.GetBytes(stringInt);
+
+                bytes[4] = dataBytes[3]; //LSB-First
+                bytes[5] = dataBytes[2]; //LSB-First
+                bytes[6] = dataBytes[1]; //LSB-First
+                bytes[7] = dataBytes[0]; //LSB-First
+
+                string echo = "";
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    echo += $"0x{bytes[i].ToString("X2")}, ";
+                }
+                Console.Clear();
+                Console.WriteLine($"Sent: {echo}");
             }
-
-            port.Write(bytes, 0, bytes.Length);
-
-            string echo = "";
-            for (int i = 0; i < bytes.Length; i++)
+            else
             {
-                echo += $"0x{bytes[i].ToString("X2")}, ";
+                byte[] bytes = new byte[dataInput.Length + MIN_MSG_SIZE - 1];
+                bytes[0] = SOH;
+                bytes[1] = (byte)dataInput.Length;
+
+                byte[] addressBytes = BitConverter.GetBytes(address);
+                bytes[2] = addressBytes[1]; //LSB-First
+                bytes[3] = addressBytes[0]; //LSB-First
+
+                byte[] dataBytes = Encoding.UTF8.GetBytes(dataInput);
+                for (int i = 0; i < dataBytes.Length; i++)
+                {
+                    bytes[i + 4] = dataBytes[i];
+                }
+
+                port.Write(bytes, 0, bytes.Length);
+
+                string echo = "";
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    echo += $"0x{bytes[i].ToString("X2")}, ";
+                }
+                Console.Clear();
+                Console.WriteLine($"Sent: {echo}");
             }
-            Console.Clear();
-            Console.WriteLine($"Sent: {echo}");
         }
 
         static void read()
