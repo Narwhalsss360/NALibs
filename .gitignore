@@ -3,3 +3,5 @@
 .vscode/c_cpp_properties.json
 *.db
 /.vs
+/Tests/NSerial Test/.vs/NSerial Test/FileContentIndex
+/Tests/NSerial Test/.vs/NSerial Test/v17/Preview
