@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO.Ports;
 using System.Text;
+using System.Threading;
 
 namespace NSerial_Test
 {
@@ -19,8 +20,9 @@ namespace NSerial_Test
             string dataInput = Console.ReadLine();
             
             int stringInt;
-            if (int.TryParse(dataInput, out stringInt))
+            if (dataInput.Substring(0, 1) == "N")
             {
+                int.TryParse(dataInput.Substring(1, dataInput.Length - 1), out stringInt);
                 byte[] bytes = new byte[8];
                 bytes[0] = SOH;
                 bytes[1] = 4;
@@ -37,13 +39,17 @@ namespace NSerial_Test
                 bytes[6] = dataBytes[1]; //LSB-First
                 bytes[7] = dataBytes[0]; //LSB-First
 
+                port.Write(bytes, 0, bytes.Length);
+
                 string echo = "";
                 for (int i = 0; i < bytes.Length; i++)
                 {
                     echo += $"0x{bytes[i].ToString("X2")}, ";
                 }
                 Console.Clear();
-                Console.WriteLine($"Sent: {echo}");
+                Console.WriteLine($"Sent: {echo}\nReply:");
+                Thread.Sleep(5);
+                read();
             }
             else
             {
@@ -61,7 +67,9 @@ namespace NSerial_Test
                     bytes[i + 4] = dataBytes[i];
                 }
 
-                port.Write(bytes, 0, bytes.Length);
+                port.DiscardInBuffer();
+                port.WriteLine(Encoding.ASCII.GetString(bytes, 0, bytes.Length));
+                port.DiscardOutBuffer();
 
                 string echo = "";
                 for (int i = 0; i < bytes.Length; i++)
@@ -69,7 +77,9 @@ namespace NSerial_Test
                     echo += $"0x{bytes[i].ToString("X2")}, ";
                 }
                 Console.Clear();
-                Console.WriteLine($"Sent: {echo}");
+                Console.WriteLine($"Sent: {echo}\nReply:");
+                Thread.Sleep(5);
+                read();
             }
         }
 

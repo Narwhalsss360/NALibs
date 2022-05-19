@@ -9,8 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NSerial Test (LCD I2C)", ".
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LiquidCrystal_I2C-1.1.2", "E:\Users\sandr\Documents\Arduino\libraries\LiquidCrystal_I2C\LiquidCrystal_I2C-1.1.2.vcxitems", "{776A8B83-8421-4B9E-8550-ADF7FAC95749}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NSerialCom-1.0.0", "E:\Users\sandr\Documents\Arduino\libraries\NSerialCom\NSerialCom-1.0.0.vcxitems", "{5BE3E499-F2A7-4777-8EC6-7916A36628E6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
