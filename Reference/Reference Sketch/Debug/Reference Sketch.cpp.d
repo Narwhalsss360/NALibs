@@ -22,4 +22,5 @@ C:\Users\sandr\AppData\Local\Temp\VMBuilds\Reference\ Sketch\uno\Debug\Reference
  C:\Users\sandr\source\repos\Narwhalsss360\NarsLibs\NALibs\NTimer\src/TimeLiterals.h \
  C:\Users\sandr\source\repos\Narwhalsss360\NarsLibs\NALibs\NWire\src/NWire.h \
  C:\Users\sandr\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.5\libraries\Wire\src/Wire.h \
- C:\Users\sandr\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/Stream.h
+ C:\Users\sandr\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino/Stream.h \
+ C:\Users\sandr\source\repos\Narwhalsss360\NarsLibs\NALibs\NSerialCom\src/NSerialCom.h
