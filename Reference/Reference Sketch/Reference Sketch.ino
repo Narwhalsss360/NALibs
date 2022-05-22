@@ -1,3 +1,4 @@
+#include <NDefs.h>
 #include <NColor.h>
 #include <NFuncs.h>
 #include <NPush.h>
