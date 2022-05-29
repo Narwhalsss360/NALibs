@@ -8,3 +8,11 @@
 /Tests/NSerial Test/.vs/NSerial Test/v17
 .vscode
 /.vscode
+Reference/Reference Sketch/__vm/.Reference Sketch.vsarduino.h
+Reference/Reference Sketch/__vm/Compile.vmps.xml
+Reference/Reference Sketch/__vm/Configuration.Debug.vmps.xml
+Reference/Reference Sketch/__vm/Upload.vmps.xml
+Tests/NSerial Test (LCD I2C)/__vm/.NSerial Test (LCD I2C).vsarduino.h
+Tests/NSerial Test (LCD I2C)/__vm/Compile.vmps.xml
+Tests/NSerial Test (LCD I2C)/__vm/Configuration.Debug.vmps.xml
+Tests/NSerial Test (LCD I2C)/__vm/Upload.vmps.xml
