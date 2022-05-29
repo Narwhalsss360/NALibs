@@ -10,3 +10,4 @@
   [NSerialCom](https://github.com/Narwhalsss360/NSerialCom/actions)
   [NTimer](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NTimer/)
   [NWire](https://github.com/Narwhalsss360/NWire/actions)
+  [NHC-SR04](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NHC-SR04/)

@@ -19,3 +19,4 @@ http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NPush/
 http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NColor/
 http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NDefs/
 http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NTimer/
+http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NHC-SR04/
