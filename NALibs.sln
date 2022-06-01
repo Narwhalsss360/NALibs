@@ -48,7 +48,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{50586BEC-EDA
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reference Sketch", "Reference\Reference Sketch\Reference Sketch.vcxproj", "{7115AD14-D10E-49DF-BB08-E1A1B4C8717A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NHCSR04", "NHC-SR04\NHCSR04.vcxitems", "{5134BA3D-722C-45E4-8A9B-1403FC44B697}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NHCSR04", "NHC-SR04\NHCSR04.vcxitems", "{8DFC44F8-4BD7-4F22-9380-D35D2A64E5DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,7 +99,7 @@ Global
 		{FBC74E9F-D067-422D-80ED-C55ED22FEC96} = {D02344FC-7593-4C0B-8EF1-7F67F097BF61}
 		{C5F80730-F44F-4478-BDAE-6634EFC2CA88} = {D02344FC-7593-4C0B-8EF1-7F67F097BF61}
 		{7115AD14-D10E-49DF-BB08-E1A1B4C8717A} = {6CE362D3-5F1D-4FFA-847D-6A84CF5FC103}
-		{5134BA3D-722C-45E4-8A9B-1403FC44B697} = {1D60B878-A8E5-4242-9E52-A2DA818397AF}
+		{8DFC44F8-4BD7-4F22-9380-D35D2A64E5DE} = {1D60B878-A8E5-4242-9E52-A2DA818397AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CC664A3-5DE9-4A39-A123-9E5CD08BAA65}
@@ -108,7 +108,6 @@ Global
 		NColor\NColor.vcxitems*{03475ea5-0705-4e6c-bd81-9adb90f4e5c4}*SharedItemsImports = 9
 		NSerialCom\NSerialCom.vcxitems*{12781fed-44ee-496c-b086-e8be6ed3b7a5}*SharedItemsImports = 9
 		NDefs\NDefs.vcxitems*{14c9dc9f-6259-48ae-89cd-21382b2a3088}*SharedItemsImports = 9
-		NHC-SR04\NHCSR04.vcxitems*{5134ba3d-722c-45e4-8a9b-1403fc44b697}*SharedItemsImports = 9
 		NFuncs\NFuncs.vcxitems*{5e64ea8b-9189-4edf-86e2-6bfbeb350314}*SharedItemsImports = 9
 		NColor\NColor.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
 		NDefs\NDefs.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
@@ -121,6 +120,7 @@ Global
 		NWire\NWire.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
 		NPush\NPush.vcxitems*{7a568d34-eaaf-418c-85d3-78ba7431c45a}*SharedItemsImports = 9
 		NWire\NWire.vcxitems*{8010d429-207a-4fd4-9a7d-70dc23c6f1c5}*SharedItemsImports = 9
+		NHC-SR04\NHCSR04.vcxitems*{8dfc44f8-4bd7-4f22-9380-d35d2a64e5de}*SharedItemsImports = 9
 		NTimer\NTimer.vcxitems*{b71d598b-cba5-4070-ab75-eec486cd193a}*SharedItemsImports = 9
 		NRotary\NRotary.vcxitems*{c3a94ed2-679d-44fe-a6fe-4bb7b3d58880}*SharedItemsImports = 9
 	EndGlobalSection
