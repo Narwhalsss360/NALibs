@@ -60,6 +60,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NEvents", "NEvents", "{FB70
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NEvents Test 1", "Tests\NEvents\NEvents Test 1\NEvents Test 1.vcxproj", "{B66F8712-91CB-4639-B00F-474AC8967E1D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NEvents", "NEvents\NEvents.vcxitems", "{6690F465-F8A8-4E47-85AD-198D9B969444}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,7 @@ Global
 		{EACAA1FC-DA78-4780-A8AD-1B34A04589F6} = {0E869463-603F-4106-A670-C69AC46E97EB}
 		{FB70BEC8-F7D1-49D8-A3B6-2837765BE403} = {79B844CE-9316-45B5-A2E5-35EA0CDE26CF}
 		{B66F8712-91CB-4639-B00F-474AC8967E1D} = {FB70BEC8-F7D1-49D8-A3B6-2837765BE403}
+		{6690F465-F8A8-4E47-85AD-198D9B969444} = {1D60B878-A8E5-4242-9E52-A2DA818397AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CC664A3-5DE9-4A39-A123-9E5CD08BAA65}
@@ -148,6 +151,7 @@ Global
 		NSerialCom\NSerialCom.vcxitems*{12781fed-44ee-496c-b086-e8be6ed3b7a5}*SharedItemsImports = 9
 		NDefs\NDefs.vcxitems*{14c9dc9f-6259-48ae-89cd-21382b2a3088}*SharedItemsImports = 9
 		NFuncs\NFuncs.vcxitems*{5e64ea8b-9189-4edf-86e2-6bfbeb350314}*SharedItemsImports = 9
+		NEvents\NEvents.vcxitems*{6690f465-f8a8-4e47-85ad-198d9b969444}*SharedItemsImports = 9
 		NColor\NColor.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
 		NDefs\NDefs.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
 		NFuncs\NFuncs.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
@@ -162,6 +166,7 @@ Global
 		NHC-SR04\NHCSR04.vcxitems*{8dfc44f8-4bd7-4f22-9380-d35d2a64e5de}*SharedItemsImports = 9
 		NDefs\NDefs.vcxitems*{ac1d484a-6850-4df3-bbd0-71ffab2989e9}*SharedItemsImports = 4
 		NPush\NPush.vcxitems*{ac1d484a-6850-4df3-bbd0-71ffab2989e9}*SharedItemsImports = 4
+		NDefs\NDefs.vcxitems*{b66f8712-91cb-4639-b00f-474ac8967e1d}*SharedItemsImports = 4
 		NTimer\NTimer.vcxitems*{b71d598b-cba5-4070-ab75-eec486cd193a}*SharedItemsImports = 9
 		NRotary\NRotary.vcxitems*{c3a94ed2-679d-44fe-a6fe-4bb7b3d58880}*SharedItemsImports = 9
 	EndGlobalSection
