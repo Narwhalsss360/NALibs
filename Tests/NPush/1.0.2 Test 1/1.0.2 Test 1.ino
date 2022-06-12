@@ -1,4 +1,3 @@
-#define MANUAL_BUTTON_UPDATE
 #include <NPush.h>
 
 #define WHILE_TRUE_TEST
@@ -14,6 +13,7 @@
 #define BUTTON_PIN 2
 #define BUTTON_DEBOUNCE 30
 
+Push fakeButton(4, INPUT_PULLUP, BUTTON_DEBOUNCE);
 Push button(BUTTON_PIN, INPUT_PULLUP, BUTTON_DEBOUNCE);
 
 #ifdef ONPRESS_CALLBACK_TEST
@@ -33,6 +33,10 @@ void onRelease(unsigned int holdTime)
 void setup()
 {
 	Serial.begin(BAUDRATE);
+	while (!Serial);
+	Serial.flush();
+	Serial.println("Flushed:");
+	Serial.println("Instance address: " + String((uint16_t)&button));
 #ifdef ONPRESS_CALLBACK_TEST
 	button.onPress = onPress;
 #endif

@@ -135,6 +135,8 @@ Global
 		NPush\NPush.vcxitems*{7a568d34-eaaf-418c-85d3-78ba7431c45a}*SharedItemsImports = 9
 		NWire\NWire.vcxitems*{8010d429-207a-4fd4-9a7d-70dc23c6f1c5}*SharedItemsImports = 9
 		NHC-SR04\NHCSR04.vcxitems*{8dfc44f8-4bd7-4f22-9380-d35d2a64e5de}*SharedItemsImports = 9
+		NDefs\NDefs.vcxitems*{ac1d484a-6850-4df3-bbd0-71ffab2989e9}*SharedItemsImports = 4
+		NPush\NPush.vcxitems*{ac1d484a-6850-4df3-bbd0-71ffab2989e9}*SharedItemsImports = 4
 		NTimer\NTimer.vcxitems*{b71d598b-cba5-4070-ab75-eec486cd193a}*SharedItemsImports = 9
 		NRotary\NRotary.vcxitems*{c3a94ed2-679d-44fe-a6fe-4bb7b3d58880}*SharedItemsImports = 9
 	EndGlobalSection
