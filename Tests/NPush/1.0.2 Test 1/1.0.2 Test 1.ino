@@ -6,9 +6,12 @@
 #define ONRELEASE_METHOD_TEST
 #define ONPRESS_CALLBACK_TEST
 #define ONRELEASE_CALLBACK_TEST
+//#define TEST_SERIAL
 
 #define BAUDRATE 1000000
-#define BUTTON_PIN 3
+#define TEST_SERIAL_MESSAGE "Serial port active."
+
+#define BUTTON_PIN 2
 #define BUTTON_DEBOUNCE 30
 
 Push button(BUTTON_PIN, INPUT_PULLUP, BUTTON_DEBOUNCE);
@@ -40,6 +43,10 @@ void setup()
 
 void loop()
 {
+#ifdef TEST_SERIAL
+	Serial.println(TEST_SERIAL_MESSAGE);
+#endif
+
 #ifdef MANUAL_BUTTON_UPDATE
 	button.update();
 #endif
