@@ -1,0 +1,7 @@
+NHCSR04            	LITERAL1
+
+SR04    			KEYWORD1
+ping				KEYWORD2
+millimeters			KEYWORD2
+centimeters			KEYWORD2
+inches  			KEYWORD2

@@ -10,6 +10,7 @@ namespace Installer
     {
         string ExecutablePath = string.Empty;
         FileStream DirectoriesFile;
+        const bool OverwriteDestinationDirectory = true;
 
         public InstallerForm()
         {
@@ -54,7 +55,14 @@ namespace Installer
                 {
                     SourceTextBox.Text = InputString.Substring(0, InputString.IndexOf("\n"));
                     InputString = InputString.Remove(0, InputString.IndexOf("\n") + 1);
-                    DestinationTextBox.Text = InputString;
+                    if (OverwriteDestinationDirectory)
+                    {
+                        DestinationTextBox.Text = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Arduino\\libraries";
+                    }
+                    else
+                    {
+                        DestinationTextBox.Text = InputString;
+                    }
                 }
             }
         }
