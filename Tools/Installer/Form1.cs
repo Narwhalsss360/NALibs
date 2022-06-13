@@ -87,7 +87,7 @@ namespace Installer
                 }
             }
         }
-        
+
         private void SelectAllButton_Click(object sender, EventArgs e)
         {
             NColorCheckbox.Checked = true;
