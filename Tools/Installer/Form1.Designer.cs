@@ -45,6 +45,8 @@
             this.NWireCheckbox = new System.Windows.Forms.CheckBox();
             this.CopySelectedButton = new System.Windows.Forms.Button();
             this.DeleteSelectedButton = new System.Windows.Forms.Button();
+            this.SelectAllButton = new System.Windows.Forms.Button();
+            this.DeselectAllButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SourceLabel
@@ -204,11 +206,33 @@
             this.DeleteSelectedButton.UseVisualStyleBackColor = true;
             this.DeleteSelectedButton.Click += new System.EventHandler(this.DeleteSelectedButton_Click);
             // 
+            // SelectAllButton
+            // 
+            this.SelectAllButton.Location = new System.Drawing.Point(125, 58);
+            this.SelectAllButton.Name = "SelectAllButton";
+            this.SelectAllButton.Size = new System.Drawing.Size(150, 109);
+            this.SelectAllButton.TabIndex = 16;
+            this.SelectAllButton.Text = "Select All";
+            this.SelectAllButton.UseVisualStyleBackColor = true;
+            this.SelectAllButton.Click += new System.EventHandler(this.SelectAllButton_Click);
+            // 
+            // DeselectAllButton
+            // 
+            this.DeselectAllButton.Location = new System.Drawing.Point(125, 172);
+            this.DeselectAllButton.Name = "DeselectAllButton";
+            this.DeselectAllButton.Size = new System.Drawing.Size(150, 109);
+            this.DeselectAllButton.TabIndex = 17;
+            this.DeselectAllButton.Text = "Deselect All";
+            this.DeselectAllButton.UseVisualStyleBackColor = true;
+            this.DeselectAllButton.Click += new System.EventHandler(this.DeselectAllButton_Click);
+            // 
             // InstallerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 293);
+            this.Controls.Add(this.DeselectAllButton);
+            this.Controls.Add(this.SelectAllButton);
             this.Controls.Add(this.DeleteSelectedButton);
             this.Controls.Add(this.CopySelectedButton);
             this.Controls.Add(this.NWireCheckbox);
@@ -251,6 +275,8 @@
         private System.Windows.Forms.CheckBox NWireCheckbox;
         private System.Windows.Forms.Button CopySelectedButton;
         private System.Windows.Forms.Button DeleteSelectedButton;
+        private System.Windows.Forms.Button SelectAllButton;
+        private System.Windows.Forms.Button DeselectAllButton;
     }
 }
 
