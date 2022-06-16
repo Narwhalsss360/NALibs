@@ -168,6 +168,7 @@ Global
 		NEvents\NEvents.vcxitems*{6690f465-f8a8-4e47-85ad-198d9b969444}*SharedItemsImports = 9
 		NColor\NColor.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
 		NDefs\NDefs.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
+		NEvents\NEvents.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
 		NFuncs\NFuncs.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
 		NHC-SR04\NHCSR04.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
 		NPush\NPush.vcxitems*{7115ad14-d10e-49df-bb08-e1a1b4c8717a}*SharedItemsImports = 4
