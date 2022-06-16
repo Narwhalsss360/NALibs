@@ -62,6 +62,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NEvents Test 1", "Tests\NEv
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NEvents", "NEvents\NEvents.vcxitems", "{6690F465-F8A8-4E47-85AD-198D9B969444}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NTimer", "NTimer", "{9C9763C6-B7A9-49A5-9908-F0E1DD11C059}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NTimer Header Transition", "Tests\NTimer\NTimer Header Transition\NTimer Header Transition.vcxproj", "{E1BB8468-9D15-4007-B303-11684D5CA149}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -118,6 +122,14 @@ Global
 		{B66F8712-91CB-4639-B00F-474AC8967E1D}.Release|Any CPU.Build.0 = Release|Win32
 		{B66F8712-91CB-4639-B00F-474AC8967E1D}.Release|x86.ActiveCfg = Release|Win32
 		{B66F8712-91CB-4639-B00F-474AC8967E1D}.Release|x86.Build.0 = Release|Win32
+		{E1BB8468-9D15-4007-B303-11684D5CA149}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{E1BB8468-9D15-4007-B303-11684D5CA149}.Debug|Any CPU.Build.0 = Debug|Win32
+		{E1BB8468-9D15-4007-B303-11684D5CA149}.Debug|x86.ActiveCfg = Debug|Win32
+		{E1BB8468-9D15-4007-B303-11684D5CA149}.Debug|x86.Build.0 = Debug|Win32
+		{E1BB8468-9D15-4007-B303-11684D5CA149}.Release|Any CPU.ActiveCfg = Release|Win32
+		{E1BB8468-9D15-4007-B303-11684D5CA149}.Release|Any CPU.Build.0 = Release|Win32
+		{E1BB8468-9D15-4007-B303-11684D5CA149}.Release|x86.ActiveCfg = Release|Win32
+		{E1BB8468-9D15-4007-B303-11684D5CA149}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +154,8 @@ Global
 		{FB70BEC8-F7D1-49D8-A3B6-2837765BE403} = {79B844CE-9316-45B5-A2E5-35EA0CDE26CF}
 		{B66F8712-91CB-4639-B00F-474AC8967E1D} = {FB70BEC8-F7D1-49D8-A3B6-2837765BE403}
 		{6690F465-F8A8-4E47-85AD-198D9B969444} = {1D60B878-A8E5-4242-9E52-A2DA818397AF}
+		{9C9763C6-B7A9-49A5-9908-F0E1DD11C059} = {79B844CE-9316-45B5-A2E5-35EA0CDE26CF}
+		{E1BB8468-9D15-4007-B303-11684D5CA149} = {9C9763C6-B7A9-49A5-9908-F0E1DD11C059}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CC664A3-5DE9-4A39-A123-9E5CD08BAA65}
@@ -171,5 +185,9 @@ Global
 		NTimer\NTimer.vcxitems*{b66f8712-91cb-4639-b00f-474ac8967e1d}*SharedItemsImports = 4
 		NTimer\NTimer.vcxitems*{b71d598b-cba5-4070-ab75-eec486cd193a}*SharedItemsImports = 9
 		NRotary\NRotary.vcxitems*{c3a94ed2-679d-44fe-a6fe-4bb7b3d58880}*SharedItemsImports = 9
+		NDefs\NDefs.vcxitems*{e1bb8468-9d15-4007-b303-11684d5ca149}*SharedItemsImports = 4
+		NEvents\NEvents.vcxitems*{e1bb8468-9d15-4007-b303-11684d5ca149}*SharedItemsImports = 4
+		NPush\NPush.vcxitems*{e1bb8468-9d15-4007-b303-11684d5ca149}*SharedItemsImports = 4
+		NTimer\NTimer.vcxitems*{e1bb8468-9d15-4007-b303-11684d5ca149}*SharedItemsImports = 4
 	EndGlobalSection
 EndGlobal
