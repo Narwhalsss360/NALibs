@@ -3,6 +3,7 @@
 
 #include "declNLinkedList.h"
 #include "EasyNode.h"
+#include "ListUtility.h"
 
 #pragma region Macros
 #define claimed(i) (i->owner != nullptr)
@@ -363,6 +364,54 @@ template <typename T>
 void EasyNode<T>::operator=(T&& _data_)
 {
 	set(_data_);
+}
+#pragma endregion
+
+#pragma region ListUtility
+template <typename T>
+ListUtility<T>::ListUtility()
+{
+}
+
+template <typename T>
+void ListUtility<T>::reverse(LinkedList<T>* list)
+{
+	Node<T>* current = list->head;
+	list->tail = current;
+
+	while (true)
+	{
+		Node<T>* tempNext = current->nextNode;
+		current->nextNode = current->previousNode;
+		current->previousNode = tempNext;
+
+		current->index = ((-1 * current->index) + (list->count - 1));
+
+		if (tempNext == nullptr)
+		{
+			list->head = current;
+			return;
+		}
+		current = tempNext;
+	}
+}
+
+template <typename T>
+void ListUtility<T>::bubbleSort(LinkedList<T>* list, int (*compareFunction)(T*, T*))
+{
+	for (NodeIndex Outer = 0; Outer < list->length() - 1; Outer++)
+	{
+		for (NodeIndex Inner = 0; Inner < list->length() - Outer - 1; Inner++)
+		{
+			T* itemA = &(*list)[Inner];
+			T* itemB = &(*list)[Inner + 1];
+			if (compareFunction(itemA, itemB) > 0) list->swap(itemA, itemB);
+		}
+	}
+}
+template <typename T>
+ListUtility<T>::~ListUtility()
+{
 }
 #pragma endregion
 

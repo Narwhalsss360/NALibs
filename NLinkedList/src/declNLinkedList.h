@@ -12,6 +12,9 @@ template <typename T>
 class INode;
 
 template <typename T>
+class ListUtility;
+
+template <typename T>
 class Node
 {
 public:
@@ -23,6 +26,7 @@ public:
 
 	friend class LinkedList<T>;
 	friend class INode<T>;
+	friend class ListUtility<T>;
 private:
 	LinkedList<T>* owner;
 	NodeIndex index;
@@ -62,6 +66,7 @@ public:
 	INode<T> begin();
 	INode<T> end();
 	~LinkedList();
+	friend class ListUtility<T>;
 
 private:
 	void incrementIndices(Node<T>*);
@@ -69,5 +74,4 @@ private:
 	NodeIndex count;
 	Node<T>* head, * tail;
 };
-
 #endif
