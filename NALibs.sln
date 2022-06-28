@@ -66,6 +66,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NTimer Header Transition", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reference Sketch", "Reference\Reference Sketch\Reference Sketch.vcxproj", "{F4D1DBF4-8F82-4004-9A64-50C2C5AAE625}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NLinkedList", "NLinkedList\NLinkedList.vcxitems", "{DCEEA9D4-E710-463B-9F67-65327A12DCAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -156,6 +158,7 @@ Global
 		{9C9763C6-B7A9-49A5-9908-F0E1DD11C059} = {79B844CE-9316-45B5-A2E5-35EA0CDE26CF}
 		{E1BB8468-9D15-4007-B303-11684D5CA149} = {9C9763C6-B7A9-49A5-9908-F0E1DD11C059}
 		{F4D1DBF4-8F82-4004-9A64-50C2C5AAE625} = {6CE362D3-5F1D-4FFA-847D-6A84CF5FC103}
+		{DCEEA9D4-E710-463B-9F67-65327A12DCAC} = {1D60B878-A8E5-4242-9E52-A2DA818397AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CC664A3-5DE9-4A39-A123-9E5CD08BAA65}
@@ -176,6 +179,7 @@ Global
 		NTimer\NTimer.vcxitems*{b66f8712-91cb-4639-b00f-474ac8967e1d}*SharedItemsImports = 4
 		NTimer\NTimer.vcxitems*{b71d598b-cba5-4070-ab75-eec486cd193a}*SharedItemsImports = 9
 		NRotary\NRotary.vcxitems*{c3a94ed2-679d-44fe-a6fe-4bb7b3d58880}*SharedItemsImports = 9
+		NLinkedList\NLinkedList.vcxitems*{dceea9d4-e710-463b-9f67-65327a12dcac}*SharedItemsImports = 9
 		NDefs\NDefs.vcxitems*{e1bb8468-9d15-4007-b303-11684d5ca149}*SharedItemsImports = 4
 		NEvents\NEvents.vcxitems*{e1bb8468-9d15-4007-b303-11684d5ca149}*SharedItemsImports = 4
 		NPush\NPush.vcxitems*{e1bb8468-9d15-4007-b303-11684d5ca149}*SharedItemsImports = 4
@@ -185,6 +189,7 @@ Global
 		NEvents\NEvents.vcxitems*{f4d1dbf4-8f82-4004-9a64-50c2c5aae625}*SharedItemsImports = 4
 		NFuncs\NFuncs.vcxitems*{f4d1dbf4-8f82-4004-9a64-50c2c5aae625}*SharedItemsImports = 4
 		NHC-SR04\NHCSR04.vcxitems*{f4d1dbf4-8f82-4004-9a64-50c2c5aae625}*SharedItemsImports = 4
+		NLinkedList\NLinkedList.vcxitems*{f4d1dbf4-8f82-4004-9a64-50c2c5aae625}*SharedItemsImports = 4
 		NPush\NPush.vcxitems*{f4d1dbf4-8f82-4004-9a64-50c2c5aae625}*SharedItemsImports = 4
 		NRotary\NRotary.vcxitems*{f4d1dbf4-8f82-4004-9a64-50c2c5aae625}*SharedItemsImports = 4
 		NSerialCom\NSerialCom.vcxitems*{f4d1dbf4-8f82-4004-9a64-50c2c5aae625}*SharedItemsImports = 4

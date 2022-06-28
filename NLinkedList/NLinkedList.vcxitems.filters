@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;s</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="Library metadata">
+      <UniqueIdentifier>{3a26a92a-8435-42ba-b40e-2e5a78295ccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Examples">
+      <UniqueIdentifier>{0fcf5970-8a2a-4d25-b0d3-dea41832dd0a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="$(MSBuildThisFileDirectory)src\NLinkedList.h">
+      <Filter>Header Files</Filter>
+    </Text>
+    <Text Include="$(MSBuildThisFileDirectory)library.properties">
+      <Filter>Library metadata</Filter>
+    </Text>
+    <Text Include="$(MSBuildThisFileDirectory)keywords.txt">
+      <Filter>Library metadata</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\declNLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\EasyNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)README.md">
+      <Filter>Library metadata</Filter>
+    </None>
+  </ItemGroup>
+</Project>
