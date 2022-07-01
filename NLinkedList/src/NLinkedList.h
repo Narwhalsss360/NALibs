@@ -2,14 +2,13 @@
 #define _NLinkedList_h
 
 #include "declNLinkedList.h"
-#include "EasyNode.h"
+#include "PrimitiveNode.h"
 #include "ListUtility.h"
 
 #pragma region Macros
 #define claimed(i) (i->owner != nullptr)
 #define owned(i) (i->owner == this)
 #define NBC(it) ((Node<T>*)it)
-#define NEW_EASYLIST(n, T) typedef LinkedList<T> n
 #define foreach_node(t, l) for (t : l)
 
 #ifndef __EXCLUDE_FOREACH__
@@ -312,56 +311,56 @@ LinkedList<T>::~LinkedList()
 }
 #pragma endregion
 
-#pragma region EasyNode
+#pragma region PrimitiveNode
 template <typename T>
-EasyNode<T>::EasyNode()
+PrimitiveNode<T>::PrimitiveNode()
 {
 }
 
 template <typename T>
-EasyNode<T>::EasyNode(T& _data_)
+PrimitiveNode<T>::PrimitiveNode(T& _data_)
 	: data(_data_)
 {
 }
 
 template <typename T>
-EasyNode<T>::EasyNode(T&& _data_)
+PrimitiveNode<T>::PrimitiveNode(T&& _data_)
 	: data(_data_)
 {
 }
 
 template <typename T>
-T& EasyNode<T>::get() const
+T& PrimitiveNode<T>::get() const
 {
 	return data;
 }
 
 template <typename T>
-void EasyNode<T>::set(T& _data_)
+void PrimitiveNode<T>::set(T& _data_)
 {
 	data = _data_;
 }
 
 template <typename T>
-void EasyNode<T>::set(T&& _data_)
+void PrimitiveNode<T>::set(T&& _data_)
 {
 	data = _data_;
 }
 
 template <typename T>
-EasyNode<T>::operator T& () const
+PrimitiveNode<T>::operator T& () const
 {
 	return get();
 }
 
 template <typename T>
-void EasyNode<T>::operator=(T& _data_)
+void PrimitiveNode<T>::operator=(T& _data_)
 {
 	set(_data_);
 }
 
 template <typename T>
-void EasyNode<T>::operator=(T&& _data_)
+void PrimitiveNode<T>::operator=(T&& _data_)
 {
 	set(_data_);
 }

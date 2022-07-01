@@ -3,15 +3,15 @@
 
 #include "declNLinkedList.h"
 
-#define NEW_EASYNODE(n, T) typedef EasyNode<T> n
+#define NEW_PRIMITIVENODE(n, T) typedef PrimitiveNode<T> n
 
 template <typename T>
-class EasyNode : public Node<EasyNode<T>>
+class PrimitiveNode : public Node<PrimitiveNode<T>>
 {
 public:
-	EasyNode();
-	EasyNode(T&);
-	EasyNode(T&&);
+	PrimitiveNode();
+	PrimitiveNode(T&);
+	PrimitiveNode(T&&);
 
 	T& get() const;
 	void set(T&);

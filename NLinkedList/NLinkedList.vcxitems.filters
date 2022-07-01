@@ -31,7 +31,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\declNLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\EasyNode.h">
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\PrimitiveNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\ListUtility.h">

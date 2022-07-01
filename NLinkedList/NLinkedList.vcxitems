@@ -21,7 +21,7 @@
   <ItemGroup>
     <!-- <ClInclude Include="$(MSBuildThisFileDirectory)NLinkedList.h" /> -->
     <ClInclude Include="$(MSBuildThisFileDirectory)src\declNLinkedList.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)src\EasyNode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\PrimitiveNode.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\ListUtility.h" />
   </ItemGroup>
   <ItemGroup>
