@@ -53,17 +53,6 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-    <Import Project="..\..\NColor\NColor.vcxitems" Label="Shared" />
-    <Import Project="..\..\NWire\NWire.vcxitems" Label="Shared" />
-    <Import Project="..\..\NTimer\NTimer.vcxitems" Label="Shared" />
-    <Import Project="..\..\NStreamCom\NStreamCom.vcxitems" Label="Shared" />
-    <Import Project="..\..\NRotary\NRotary.vcxitems" Label="Shared" />
-    <Import Project="..\..\NPush\NPush.vcxitems" Label="Shared" />
-    <Import Project="..\..\NLinkedList\NLinkedList.vcxitems" Label="Shared" />
-    <Import Project="..\..\NHC-SR04\NHCSR04.vcxitems" Label="Shared" />
-    <Import Project="..\..\NFuncs\NFuncs.vcxitems" Label="Shared" />
-    <Import Project="..\..\NEvents\NEvents.vcxitems" Label="Shared" />
-    <Import Project="..\..\NDefs\NDefs.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -84,7 +73,6 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Reference Sketch;$(ProjectDir)..\..\NTimer\src;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.5\libraries\EEPROM\src;$(ProjectDir)..\..\NPush\src;$(ProjectDir)..\..\NDefs\src;$(ProjectDir)..\..\NColor\src;$(ProjectDir)..\..\NWire\src;$(ProjectDir)..\..\NStreamCom\src;$(ProjectDir)..\..\NRotary\src;$(ProjectDir)..\..\NLinkedList\src;$(ProjectDir)..\..\NHC-SR04\src;$(ProjectDir)..\..\NFuncs\src;$(ProjectDir)..\..\NEvents\src;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.5\cores\arduino;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\hardware\avr\1.8.5\variants\standard;$(ProjectDir)..\..\NColor\examples\NColor;$(ProjectDir)..\..\NColor\examples\RGBLed;$(ProjectDir)..\..\NDefs\examples\isBetween;$(ProjectDir)..\..\NDefs\examples\printVersion;$(ProjectDir)..\..\NDefs\examples\reinterpret_c_style;$(ProjectDir)..\..\NEvents\examples\ExampleClass;$(ProjectDir)..\..\NFuncs\examples\boolToString;$(ProjectDir)..\..\NFuncs\examples\fromRight;$(ProjectDir)..\..\NFuncs\examples\mapf;$(ProjectDir)..\..\NHC-SR04\examples\BasicDistance;$(ProjectDir)..\..\NHC-SR04\examples\MaxDistance;$(ProjectDir)..\..\NHC-SR04\examples\Pinging;$(ProjectDir)..\..\NPush\examples\IncrDecr;$(ProjectDir)..\..\NPush\examples\Interrupt;$(ProjectDir)..\..\NPush\examples\NPush;$(ProjectDir)..\..\NPush\examples\NPushLED;$(ProjectDir)..\..\NPush\examples\UsingEvents;$(ProjectDir)..\..\NTimer\examples\BasicBlink;$(ProjectDir)..\..\NTimer\examples\EEPROMSave;$(ProjectDir)..\..\NTimer\examples\LiteTimer;$(ProjectDir)..\..\NTimer\examples\Multiple;$(ProjectDir)..\..\NTimer\examples\PerfTimer;$(ProjectDir)..\..\NWire\examples\NWireClient;$(ProjectDir)..\..\NWire\examples\NWireHost;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\\lib\gcc\avr\7.3.0\include;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include-fixed;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\avr\include\avr;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\..\..\..\..\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino7\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ProjectDir)__vm\.Reference Sketch.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_atmega328p__;__AVR_ATmega328P__;__AVR_ATmega328p__;F_CPU=16000000L;ARDUINO=108013;ARDUINO_AVR_UNO;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -123,9 +111,6 @@
       <FileType>Document</FileType>
     </None>
     <None Update="C:\Users\sandr\source\repos\Narwhalsss360\NarsLibs\NALibs\NEvents\README.md">
-      <FileType>Document</FileType>
-    </None>
-    <None Update="C:\Users\sandr\source\repos\Narwhalsss360\NarsLibs\NALibs\NTimer\..\NHC-SR04\README.md">
       <FileType>Document</FileType>
     </None>
   </ItemGroup>
