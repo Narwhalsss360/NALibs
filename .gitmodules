@@ -31,3 +31,6 @@
 [submodule "NEvents"]
 	path = NEvents
 	url = git@github.com:Narwhalsss360/NEvents.git
+[submodule "NStreamCom"]
+	path = NStreamCom
+	url = git@github.com:Narwhalsss360/NStreamCom.git
