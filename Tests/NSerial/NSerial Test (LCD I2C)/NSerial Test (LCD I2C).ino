@@ -1,4 +1,5 @@
 #include <LiquidCrystal_I2C.h>
+#include <NDefs.h>
 #include <NSerialCom.h>
 
 #define LCD_ADDR 0x27

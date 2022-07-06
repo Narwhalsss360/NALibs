@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Timers;
 using System.IO.Ports;
 using System.Text;
 using System.Threading;
@@ -9,78 +10,70 @@ namespace NSerial_Test
     {
         const byte MIN_MSG_SIZE = 5;
         const byte SOH = 0x01;
+        const byte ASCII_RETURN = 13;
+        const byte ASCII_NEWLINE = 10;
+        const byte STREAM_METADATA_START_OFFSET = 4;
+        const byte STREAM_METADATA_SIZE = 6;
+        const byte STREAM_MINUMUM_DATA_FULL_LENGTH = STREAM_METADATA_SIZE + 1;
+
+        static bool saftiness = false;
         static SerialPort port = new SerialPort();
 
         static void write()
         {
+            saftiness = false;
+        redo:
+            Console.WriteLine();
             Console.Write("Address: ");
-            int address = int.Parse(Console.ReadLine());
 
-            Console.Write("Data:");
+            ushort address;
+            if (!ushort.TryParse(Console.ReadLine(), out address))
+            {
+                Console.WriteLine("Enter a valid number");
+                goto redo;
+            }
+
+            byte[] addresBytes = BitConverter.GetBytes(address);
+
+            Console.Write("Data: ");
             string dataInput = Console.ReadLine();
-            
-            int stringInt;
-            if (dataInput.Substring(0, 1) == "N")
+
+            byte[] inputBytes = Encoding.UTF8.GetBytes(dataInput);
+            byte[] buffer = new byte[inputBytes.Length + STREAM_METADATA_SIZE];
+
+            buffer[0] = SOH;
+            buffer[1] = ((byte)inputBytes.Length);
+            buffer[2] = addresBytes[0];
+            buffer[3] = addresBytes[1];
+
+            for (int i = 0; i < inputBytes.Length; i++)
             {
-                int.TryParse(dataInput.Substring(1, dataInput.Length - 1), out stringInt);
-                byte[] bytes = new byte[8];
-                bytes[0] = SOH;
-                bytes[1] = 4;
-
-                byte[] addressBytes = BitConverter.GetBytes(address);
-                bytes[2] = addressBytes[1]; //LSB-First
-                bytes[3] = addressBytes[0]; //LSB-First
-
-                byte[] dataBytes = new byte[4];
-                dataBytes = BitConverter.GetBytes(stringInt);
-
-                bytes[4] = dataBytes[3]; //LSB-First
-                bytes[5] = dataBytes[2]; //LSB-First
-                bytes[6] = dataBytes[1]; //LSB-First
-                bytes[7] = dataBytes[0]; //LSB-First
-
-                port.Write(bytes, 0, bytes.Length);
-
-                string echo = "";
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    echo += $"0x{bytes[i].ToString("X2")}, ";
-                }
-                Console.Clear();
-                Console.WriteLine($"Sent: {echo}\nReply:");
-                Thread.Sleep(5);
-                read();
+                buffer[i + STREAM_METADATA_START_OFFSET] = inputBytes[i];
             }
-            else
+
+            buffer[buffer.Length - 2] = ASCII_RETURN;
+            buffer[buffer.Length - 1] = ASCII_NEWLINE;
+            Console.Write("Wrote: ");
+            for (int i = 0; i < buffer.Length; i++)
             {
-                byte[] bytes = new byte[dataInput.Length + MIN_MSG_SIZE - 1];
-                bytes[0] = SOH;
-                bytes[1] = (byte)dataInput.Length;
-
-                byte[] addressBytes = BitConverter.GetBytes(address);
-                bytes[2] = addressBytes[1]; //LSB-First
-                bytes[3] = addressBytes[0]; //LSB-First
-
-                byte[] dataBytes = Encoding.UTF8.GetBytes(dataInput);
-                for (int i = 0; i < dataBytes.Length; i++)
-                {
-                    bytes[i + 4] = dataBytes[i];
-                }
-
-                port.DiscardInBuffer();
-                port.WriteLine(Encoding.ASCII.GetString(bytes, 0, bytes.Length));
-                port.DiscardOutBuffer();
-
-                string echo = "";
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    echo += $"0x{bytes[i].ToString("X2")}, ";
-                }
-                Console.Clear();
-                Console.WriteLine($"Sent: {echo}\nReply:");
-                Thread.Sleep(5);
-                read();
+                Console.Write($" [{i}]: {buffer[i]}");
             }
+            Console.WriteLine('\n');
+            port.DataReceived -= onDataRecieve;
+            port.Write(buffer, 0, buffer.Length);
+            saftiness = true;
+            port.DataReceived += onDataRecieve;
+        }
+
+        static void rawWrite()
+        {
+        redo:
+            Console.Write($"{port.PortName} > ");
+            string input = Console.ReadLine();
+            if (input == null || input == string.Empty) goto redo;
+
+            byte[] bytes = Encoding.ASCII.GetBytes(input);
+            port.Write(bytes, 0, bytes.Length);
         }
 
         static void read()
@@ -99,13 +92,13 @@ namespace NSerial_Test
                 }
 
                 byte inChar = (byte)port.ReadByte();
-                
+
                 if (size >= MIN_MSG_SIZE)
                     break;
-                
-                output += $"0x{ inChar.ToString("X2") }, ";
+
+                output += $"0x{inChar.ToString("X2")}, ";
                 size++;
-                
+
                 if (size > 38)
                 {
                     port.DiscardInBuffer();
@@ -117,31 +110,26 @@ namespace NSerial_Test
 
         static void Main(string[] args)
         {
-            Console.Write("Enter Port Name:");
-            port.PortName = $"{ Console.ReadLine() }";
-            Console.Write("Enter Baudrate:");
+            Console.Write("Enter Port Name: ");
+            port.PortName = $"{Console.ReadLine()}";
+            Console.Write("Enter Baudrate: ");
             port.BaudRate = int.Parse(Console.ReadLine());
-
-            string rw;
-            while (true)
-            {
-                Console.Write("R/W:");
-                rw = Console.ReadLine().ToUpper();
-                
-                if (rw == "R" || rw == "W")
-                    break;
-                Console.WriteLine();
-            }
-
-            Console.Clear();
+            //port.DataReceived += onDataRecieve;
             port.Open();
+            Thread.Sleep(1);
             port.DiscardInBuffer();
-            if (rw == "R")
-                while (true)
-                    read();
-            else
-                while (true)
-                    write();
+            write();
+            while (true);
+        }
+
+        static void onDataRecieve(object sender, SerialDataReceivedEventArgs args)
+        {
+            SerialPort sp = (SerialPort)sender;
+            string timeStamp = $"{DateTime.Now.Minute.ToString().PadLeft(0, '0')}:{DateTime.Now.Second.ToString().PadLeft(0, '0')}:{DateTime.Now.Millisecond.ToString().PadLeft(2, '0')}";
+            byte[] bytes = new byte[sp.BytesToRead];
+            sp.Read(bytes, 0, bytes.Length);
+            sp.DiscardInBuffer();
+            if (saftiness) write();
         }
     }
 }
