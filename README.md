@@ -14,6 +14,6 @@
   [NHC-SR04](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NHC-SR04/)
   [NPush](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NPush/)
   [NRotary](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NRotary/)
-  [NSerialCom](https://github.com/Narwhalsss360/NSerialCom/actions)
+  [NStreamCom](https://github.com/Narwhalsss360/NStreamCom/)
   [NTimer](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NTimer/)
   [NWire](https://github.com/Narwhalsss360/NWire/actions)
