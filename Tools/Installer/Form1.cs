@@ -105,7 +105,7 @@ namespace Installer
             NHCSR04Checkbox.Checked = true;
             NPushCheckbox.Checked = true;
             NRotaryCheckbox.Checked = true;
-            NSerialComCheckbox.Checked = true;
+            NStreamComCheckbox.Checked = true;
             NTimerCheckbox.Checked = true;
             NWireCheckbox.Checked = true;
         }
@@ -119,7 +119,7 @@ namespace Installer
             NHCSR04Checkbox.Checked = false;
             NPushCheckbox.Checked = false;
             NRotaryCheckbox.Checked = false;
-            NSerialComCheckbox.Checked = false;
+            NStreamComCheckbox.Checked = false;
             NTimerCheckbox.Checked = false;
             NWireCheckbox.Checked = false;
         }
@@ -163,9 +163,9 @@ namespace Installer
                 CopyDirectory($"{SourceTextBox.Text}\\NRotary", $"{DestinationTextBox.Text}\\NRotary");
             }
 
-            if (NSerialComCheckbox.Checked)
+            if (NStreamComCheckbox.Checked)
             {
-                CopyDirectory($"{SourceTextBox.Text}\\NSerialCom", $"{DestinationTextBox.Text}\\NSerialCom");
+                CopyDirectory($"{SourceTextBox.Text}\\NStreamCom", $"{DestinationTextBox.Text}\\NStreamCom");
             }
 
             if (NTimerCheckbox.Checked)
@@ -237,7 +237,7 @@ namespace Installer
                 }
             }
 
-            if (NSerialComCheckbox.Checked)
+            if (NStreamComCheckbox.Checked)
             {
                 if (Directory.Exists($"{DestinationTextBox.Text}\\NSerialCom"))
                 {

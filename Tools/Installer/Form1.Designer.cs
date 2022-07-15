@@ -40,7 +40,7 @@
             this.NHCSR04Checkbox = new System.Windows.Forms.CheckBox();
             this.NPushCheckbox = new System.Windows.Forms.CheckBox();
             this.NRotaryCheckbox = new System.Windows.Forms.CheckBox();
-            this.NSerialComCheckbox = new System.Windows.Forms.CheckBox();
+            this.NStreamComCheckbox = new System.Windows.Forms.CheckBox();
             this.NTimerCheckbox = new System.Windows.Forms.CheckBox();
             this.NWireCheckbox = new System.Windows.Forms.CheckBox();
             this.CopySelectedButton = new System.Windows.Forms.Button();
@@ -153,16 +153,16 @@
             this.NRotaryCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.NRotaryCheckbox.UseVisualStyleBackColor = true;
             // 
-            // NSerialComCheckbox
+            // NStreamComCheckbox
             // 
-            this.NSerialComCheckbox.AutoSize = true;
-            this.NSerialComCheckbox.Location = new System.Drawing.Point(15, 219);
-            this.NSerialComCheckbox.Name = "NSerialComCheckbox";
-            this.NSerialComCheckbox.Size = new System.Drawing.Size(81, 17);
-            this.NSerialComCheckbox.TabIndex = 11;
-            this.NSerialComCheckbox.Text = "NSerialCom";
-            this.NSerialComCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.NSerialComCheckbox.UseVisualStyleBackColor = true;
+            this.NStreamComCheckbox.AutoSize = true;
+            this.NStreamComCheckbox.Location = new System.Drawing.Point(15, 219);
+            this.NStreamComCheckbox.Name = "NStreamComCheckbox";
+            this.NStreamComCheckbox.Size = new System.Drawing.Size(88, 17);
+            this.NStreamComCheckbox.TabIndex = 11;
+            this.NStreamComCheckbox.Text = "NStreamCom";
+            this.NStreamComCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NStreamComCheckbox.UseVisualStyleBackColor = true;
             // 
             // NTimerCheckbox
             // 
@@ -238,7 +238,7 @@
             this.Controls.Add(this.CopySelectedButton);
             this.Controls.Add(this.NWireCheckbox);
             this.Controls.Add(this.NTimerCheckbox);
-            this.Controls.Add(this.NSerialComCheckbox);
+            this.Controls.Add(this.NStreamComCheckbox);
             this.Controls.Add(this.NRotaryCheckbox);
             this.Controls.Add(this.NPushCheckbox);
             this.Controls.Add(this.NHCSR04Checkbox);
@@ -271,7 +271,7 @@
         private System.Windows.Forms.CheckBox NHCSR04Checkbox;
         private System.Windows.Forms.CheckBox NPushCheckbox;
         private System.Windows.Forms.CheckBox NRotaryCheckbox;
-        private System.Windows.Forms.CheckBox NSerialComCheckbox;
+        private System.Windows.Forms.CheckBox NStreamComCheckbox;
         private System.Windows.Forms.CheckBox NTimerCheckbox;
         private System.Windows.Forms.CheckBox NWireCheckbox;
         private System.Windows.Forms.Button CopySelectedButton;
