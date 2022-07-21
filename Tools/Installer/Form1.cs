@@ -239,7 +239,7 @@ namespace Installer
 
             if (NStreamComCheckbox.Checked)
             {
-                if (Directory.Exists($"{DestinationTextBox.Text}\\NSerialCom"))
+                if (Directory.Exists($"{DestinationTextBox.Text}\\NStreamComCheckbox"))
                 {
                     Directory.Delete($"{DestinationTextBox.Text}\\NSerialCom", true);
                 }
