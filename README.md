@@ -1,11 +1,5 @@
 # NALibs - Working repository for all NALibs
 
-# To-Do
-
-## 1) Reimplement NSerialCom Protocol
-## 2) Continue more testing of NWire, don't trust it yet.
-## 3) Continue testing of installer tool.
-
 # Logs
   [NColor](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NColor/)
   [NDefs](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NDefs/)
@@ -17,3 +11,31 @@
   [NStreamCom](https://github.com/Narwhalsss360/NStreamCom/)
   [NTimer](http://downloads.arduino.cc/libraries/logs/github.com/Narwhalsss360/NTimer/)
   [NWire](https://github.com/Narwhalsss360/NWire/actions)
+
+# Potential naming convention
+## Global variables, functions. public Member functions, public member variables.
+### *Camel Case with first letter lowercase*
+  `addSketchBinding`
+  `addIRQBinding`
+
+## Backend API globals
+### *Dunder lower case, words seperated with underscore*
+  `__setup_irq_bindings__`
+  `__irq_st__`
+
+## Custom type, strucs and class names
+### *Camel Case*
+  `Push`
+  `ReleasedEventArgs`
+  `VoidFunctionVoid`
+
+## Private member functions
+### *Camel Case with first letter lowercase*
+  `internalUpdateRouter`
+
+## Private member variables
+### *Camel Case with first letter being a descriptor, followed by underscore*
+#### Member
+  `m_Variable`
+#### Static member
+  `s_Variable`
